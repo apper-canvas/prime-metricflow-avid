@@ -8,8 +8,8 @@
   * {
     @apply border-gray-200;
   }
-  body {
-    @apply bg-gray-50 text-gray-900 font-sans;
+body {
+    @apply bg-gray-50 text-black font-sans;
   }
   
   html {
@@ -34,11 +34,11 @@
     @apply glass-card p-6 hover:bg-white/90 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl;
   }
 .sidebar-item {
-    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:text-gray-900 hover:bg-gray-100/70 transition-all duration-200;
+    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-black hover:text-gray-900 hover:bg-gray-100/70 transition-all duration-200;
   }
   
-  .sidebar-item.active {
-    @apply bg-gradient-to-r from-primary-500/20 to-secondary-500/20 text-gray-900 border-l-4 border-primary-500;
+.sidebar-item.active {
+    @apply bg-gradient-to-r from-primary-500/20 to-secondary-500/20 text-black border-l-4 border-primary-500;
   }
 }
 
@@ -69,7 +69,7 @@
 }
 /* React Toastify customization */
 .Toastify__toast {
-  @apply bg-white text-gray-900 border border-gray-200 rounded-lg shadow-lg;
+  @apply bg-white text-black border border-gray-200 rounded-lg shadow-lg;
 }
 
 .Toastify__toast--success {
@@ -105,5 +105,5 @@
 }
 
 .apexcharts-tooltip-text {
-  @apply text-gray-900;
+  @apply text-black;
 }

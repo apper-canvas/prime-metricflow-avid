@@ -53,16 +53,16 @@ const UserMenu = ({ user, className }) => {
               transition={{ duration: 0.2 }}
               className="absolute right-0 top-full mt-2 w-56 glass-card p-2 z-20"
             >
-              <div className="px-3 py-2 border-b border-white/10 mb-2">
-                <p className="text-sm font-medium text-white">{user?.name}</p>
-                <p className="text-xs text-gray-400">{user?.email}</p>
+<div className="px-3 py-2 border-b border-white/10 mb-2">
+                <p className="text-sm font-medium text-black">{user?.name}</p>
+                <p className="text-xs text-gray-600">{user?.email}</p>
               </div>
               
               {menuItems.map((item) => (
                 <button
                   key={item.label}
-                  onClick={() => handleItemClick(item.path)}
-                  className="w-full flex items-center gap-3 px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+onClick={() => handleItemClick(item.path)}
+                  className="w-full flex items-center gap-3 px-3 py-2 text-sm text-gray-800 hover:text-black hover:bg-white/10 rounded-lg transition-colors"
                 >
                   <ApperIcon name={item.icon} size={16} />
                   {item.label}

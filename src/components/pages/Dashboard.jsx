@@ -72,9 +72,9 @@ const Dashboard = () => {
             Welcome back! Here's what's happening with your business.
           </p>
         </div>
-        <div className="text-right">
-          <p className="text-sm text-gray-400">Last updated</p>
-          <p className="text-sm font-medium text-white">
+<div className="text-right">
+          <p className="text-sm text-gray-600">Last updated</p>
+          <p className="text-sm font-medium text-black">
             {new Date().toLocaleString()}
           </p>
         </div>

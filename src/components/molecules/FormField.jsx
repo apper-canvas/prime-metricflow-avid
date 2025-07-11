@@ -5,8 +5,8 @@ import { cn } from "@/utils/cn";
 const FormField = forwardRef(({ label, error, className, ...props }, ref) => {
   return (
     <div className={cn("space-y-2", className)}>
-      {label && (
-        <label className="text-sm font-medium text-gray-300 block">
+{label && (
+        <label className="text-sm font-medium text-gray-800 block">
           {label}
         </label>
       )}

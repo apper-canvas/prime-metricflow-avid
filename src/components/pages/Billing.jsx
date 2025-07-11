@@ -67,8 +67,8 @@ const Billing = () => {
 
       {/* Current Plan */}
       <Card className="p-6">
-        <div className="flex items-center justify-between mb-6">
-          <h3 className="text-lg font-semibold text-white">Current Plan</h3>
+<div className="flex items-center justify-between mb-6">
+          <h3 className="text-lg font-semibold text-black">Current Plan</h3>
           <Badge variant="primary" className="text-sm">
             {billing?.currentPlan?.name}
           </Badge>
@@ -82,28 +82,28 @@ const Billing = () => {
             <p className="text-sm text-gray-400">per month</p>
           </div>
           
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-2">
+<div className="text-center">
+            <div className="text-3xl font-bold text-black mb-2">
               {billing?.usage?.current}
-            </div>
-            <p className="text-sm text-gray-400">
+</div>
+            <p className="text-sm text-gray-600">
               of {billing?.usage?.limit} users
             </p>
           </div>
           
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-2">
+<div className="text-center">
+            <div className="text-3xl font-bold text-black mb-2">
               {billing?.nextBilling ? formatDistance(new Date(billing.nextBilling), new Date()) : "N/A"}
             </div>
-            <p className="text-sm text-gray-400">until next billing</p>
+            <p className="text-sm text-gray-600">until next billing</p>
           </div>
         </div>
         
         <div className="mt-6 pt-6 border-t border-white/10">
           <div className="flex items-center justify-between">
-            <div>
-              <h4 className="font-medium text-white">Plan Features</h4>
-              <ul className="text-sm text-gray-400 mt-2 space-y-1">
+<div>
+              <h4 className="font-medium text-black">Plan Features</h4>
+              <ul className="text-sm text-gray-600 mt-2 space-y-1">
                 {billing?.currentPlan?.features?.map((feature, index) => (
                   <li key={index} className="flex items-center gap-2">
                     <ApperIcon name="Check" size={14} className="text-green-400" />
@@ -126,23 +126,23 @@ const Billing = () => {
       </Card>
 
       {/* Available Plans */}
-      <div className="space-y-6">
-        <h3 className="text-lg font-semibold text-white">Available Plans</h3>
+<h3 className="text-lg font-semibold text-black">Available Plans</h3>
         
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {billing?.availablePlans?.map((plan) => (
             <Card key={plan.Id} className="p-6 text-center">
-              <div className="mb-4">
-                <h4 className="text-xl font-bold text-white mb-2">{plan.name}</h4>
+<div className="mb-4">
+                <h4 className="text-xl font-bold text-black mb-2">{plan.name}</h4>
                 <div className="text-3xl font-bold gradient-text mb-2">
                   ${plan.price}
                 </div>
-                <p className="text-sm text-gray-400">per month</p>
+                <p className="text-sm text-gray-600">per month</p>
               </div>
               
               <ul className="space-y-2 mb-6">
-                {plan.features.map((feature, index) => (
-                  <li key={index} className="flex items-center gap-2 text-sm text-gray-400">
+{plan.features.map((feature, index) => (
+                  <li key={index} className="flex items-center gap-2 text-sm text-gray-600">
                     <ApperIcon name="Check" size={14} className="text-green-400" />
                     {feature}
                   </li>
@@ -164,8 +164,8 @@ const Billing = () => {
 
       {/* Payment Methods */}
       <Card className="p-6">
-        <div className="flex items-center justify-between mb-6">
-          <h3 className="text-lg font-semibold text-white">Payment Methods</h3>
+<div className="flex items-center justify-between mb-6">
+          <h3 className="text-lg font-semibold text-black">Payment Methods</h3>
           <Button variant="outline" className="flex items-center gap-2">
             <ApperIcon name="CreditCard" size={16} />
             Add Payment Method
@@ -179,11 +179,11 @@ const Billing = () => {
                 <div className="p-2 rounded-lg bg-gradient-to-br from-primary-500/20 to-secondary-500/20">
                   <ApperIcon name="CreditCard" size={20} className="text-primary-400" />
                 </div>
-                <div>
-                  <h4 className="font-medium text-white">
+<div>
+                  <h4 className="font-medium text-black">
                     •••• •••• •••• {method.last4}
                   </h4>
-                  <p className="text-sm text-gray-400">
+                  <p className="text-sm text-gray-600">
                     {method.brand} • Expires {method.expiry}
                   </p>
                 </div>
@@ -203,28 +203,27 @@ const Billing = () => {
       </Card>
 
       {/* Billing History */}
-      <Card className="p-6">
-        <h3 className="text-lg font-semibold text-white mb-6">Billing History</h3>
-        
+<Card className="p-6">
+        <h3 className="text-lg font-semibold text-black mb-6">Billing History</h3>
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-white/10">
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Date</th>
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Description</th>
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Amount</th>
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Status</th>
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Actions</th>
+<tr className="border-b border-white/10">
+                <th className="text-left py-3 px-4 text-sm font-medium text-gray-600">Date</th>
+                <th className="text-left py-3 px-4 text-sm font-medium text-gray-600">Description</th>
+                <th className="text-left py-3 px-4 text-sm font-medium text-gray-600">Amount</th>
+                <th className="text-left py-3 px-4 text-sm font-medium text-gray-600">Status</th>
+                <th className="text-left py-3 px-4 text-sm font-medium text-gray-600">Actions</th>
               </tr>
             </thead>
             <tbody>
               {billing?.billingHistory?.map((invoice, index) => (
-                <tr key={index} className="border-b border-white/10 hover:bg-white/5">
-                  <td className="py-3 px-4 text-gray-400">
+<tr key={index} className="border-b border-white/10 hover:bg-white/5">
+                  <td className="py-3 px-4 text-gray-600">
                     {new Date(invoice.date).toLocaleDateString()}
                   </td>
-                  <td className="py-3 px-4 text-white">{invoice.description}</td>
-                  <td className="py-3 px-4 text-white">${invoice.amount}</td>
+                  <td className="py-3 px-4 text-black">{invoice.description}</td>
+                  <td className="py-3 px-4 text-black">${invoice.amount}</td>
                   <td className="py-3 px-4">
                     <Badge variant={invoice.status === "paid" ? "success" : "danger"}>
                       {invoice.status}

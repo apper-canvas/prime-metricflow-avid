@@ -20,8 +20,8 @@ const MetricCard = ({ title, value, change, icon, trend, className, children }) 
           <div className="flex items-center gap-3">
             <div className="p-2 rounded-lg bg-gradient-to-br from-primary-500/20 to-secondary-500/20 border border-white/10">
               <ApperIcon name={icon} size={20} className="text-primary-400" />
-            </div>
-            <h3 className="text-sm font-medium text-gray-300">{title}</h3>
+</div>
+            <h3 className="text-sm font-medium text-gray-800">{title}</h3>
           </div>
           {trend && (
             <Badge variant={isPositive ? "success" : "danger"} className="flex items-center gap-1">

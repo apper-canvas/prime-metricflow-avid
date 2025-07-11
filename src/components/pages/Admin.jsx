@@ -1,15 +1,16 @@
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
+import { formatDistance } from "date-fns";
 import ApperIcon from "@/components/ApperIcon";
-import Button from "@/components/atoms/Button";
-import Card from "@/components/atoms/Card";
 import Badge from "@/components/atoms/Badge";
 import Avatar from "@/components/atoms/Avatar";
-import Loading from "@/components/ui/Loading";
+import Button from "@/components/atoms/Button";
+import Card from "@/components/atoms/Card";
 import Error from "@/components/ui/Error";
+import Loading from "@/components/ui/Loading";
+import Settings from "@/components/pages/Settings";
 import { adminService } from "@/services/api/adminService";
-import { formatDistance } from "date-fns";
 
 const Admin = () => {
   const [activeTab, setActiveTab] = useState("users");
@@ -69,9 +70,9 @@ const Admin = () => {
       case "users":
         return (
           <div className="space-y-6">
-            <Card className="p-6">
+<Card className="p-6">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-lg font-semibold text-white">User Management</h3>
+                <h3 className="text-lg font-semibold text-black">User Management</h3>
                 <Button className="flex items-center gap-2">
                   <ApperIcon name="UserPlus" size={16} />
                   Add User
@@ -81,12 +82,12 @@ const Admin = () => {
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
-                    <tr className="border-b border-white/10">
-                      <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">User</th>
-                      <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Role</th>
-                      <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Status</th>
-                      <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Last Active</th>
-                      <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Actions</th>
+<tr className="border-b border-white/10">
+                      <th className="text-left py-3 px-4 text-sm font-medium text-gray-600">User</th>
+                      <th className="text-left py-3 px-4 text-sm font-medium text-gray-600">Role</th>
+                      <th className="text-left py-3 px-4 text-sm font-medium text-gray-600">Status</th>
+                      <th className="text-left py-3 px-4 text-sm font-medium text-gray-600">Last Active</th>
+                      <th className="text-left py-3 px-4 text-sm font-medium text-gray-600">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -99,9 +100,9 @@ const Admin = () => {
                               fallback={user.name.charAt(0)}
                               size="sm"
                             />
-                            <div>
-                              <div className="font-medium text-white">{user.name}</div>
-                              <div className="text-sm text-gray-400">{user.email}</div>
+<div>
+                              <div className="font-medium text-black">{user.name}</div>
+                              <div className="text-sm text-gray-600">{user.email}</div>
                             </div>
                           </div>
                         </td>
@@ -114,8 +115,8 @@ const Admin = () => {
                           <Badge variant={user.status === "active" ? "success" : "danger"}>
                             {user.status}
                           </Badge>
-                        </td>
-                        <td className="py-3 px-4 text-gray-400">
+</td>
+                        <td className="py-3 px-4 text-gray-600">
                           {formatDistance(new Date(user.lastActive), new Date(), { addSuffix: true })}
                         </td>
                         <td className="py-3 px-4">
@@ -155,9 +156,9 @@ const Admin = () => {
                   <div className="p-2 rounded-lg bg-gradient-to-br from-primary-500/20 to-secondary-500/20">
                     <ApperIcon name="Users" size={20} className="text-primary-400" />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">{systemStats.totalUsers}</h3>
-                    <p className="text-sm text-gray-400">Total Users</p>
+<div>
+                    <h3 className="text-2xl font-bold text-black">{systemStats.totalUsers}</h3>
+                    <p className="text-sm text-gray-600">Total Users</p>
                   </div>
                 </div>
               </Card>
@@ -167,9 +168,9 @@ const Admin = () => {
                   <div className="p-2 rounded-lg bg-gradient-to-br from-secondary-500/20 to-accent-500/20">
                     <ApperIcon name="TrendingUp" size={20} className="text-secondary-400" />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">{systemStats.activeUsers}</h3>
-                    <p className="text-sm text-gray-400">Active Users</p>
+<div>
+                    <h3 className="text-2xl font-bold text-black">{systemStats.activeUsers}</h3>
+                    <p className="text-sm text-gray-600">Active Users</p>
                   </div>
                 </div>
               </Card>
@@ -179,9 +180,9 @@ const Admin = () => {
                   <div className="p-2 rounded-lg bg-gradient-to-br from-accent-500/20 to-primary-500/20">
                     <ApperIcon name="DollarSign" size={20} className="text-accent-400" />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">${systemStats.revenue}</h3>
-                    <p className="text-sm text-gray-400">Revenue</p>
+<div>
+                    <h3 className="text-2xl font-bold text-black">${systemStats.revenue}</h3>
+                    <p className="text-sm text-gray-600">Revenue</p>
                   </div>
                 </div>
               </Card>
@@ -191,9 +192,9 @@ const Admin = () => {
                   <div className="p-2 rounded-lg bg-gradient-to-br from-green-500/20 to-blue-500/20">
                     <ApperIcon name="Activity" size={20} className="text-green-400" />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">{systemStats.uptime}%</h3>
-                    <p className="text-sm text-gray-400">System Uptime</p>
+<div>
+                    <h3 className="text-2xl font-bold text-black">{systemStats.uptime}%</h3>
+                    <p className="text-sm text-gray-600">System Uptime</p>
                   </div>
                 </div>
               </Card>
@@ -204,13 +205,13 @@ const Admin = () => {
       case "settings":
         return (
           <div className="space-y-6">
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold text-white mb-6">System Settings</h3>
+<Card className="p-6">
+              <h3 className="text-lg font-semibold text-black mb-6">System Settings</h3>
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-4 rounded-lg bg-white/5">
-                  <div>
-                    <h4 className="font-medium text-white">Maintenance Mode</h4>
-                    <p className="text-sm text-gray-400">
+<div>
+                    <h4 className="font-medium text-black">Maintenance Mode</h4>
+                    <p className="text-sm text-gray-600">
                       Enable maintenance mode to prevent user access
                     </p>
                   </div>
@@ -220,9 +221,9 @@ const Admin = () => {
                 </div>
                 
                 <div className="flex items-center justify-between p-4 rounded-lg bg-white/5">
-                  <div>
-                    <h4 className="font-medium text-white">Backup System</h4>
-                    <p className="text-sm text-gray-400">
+<div>
+                    <h4 className="font-medium text-black">Backup System</h4>
+                    <p className="text-sm text-gray-600">
                       Configure automatic backups
                     </p>
                   </div>
@@ -232,9 +233,9 @@ const Admin = () => {
                 </div>
                 
                 <div className="flex items-center justify-between p-4 rounded-lg bg-white/5">
-                  <div>
-                    <h4 className="font-medium text-white">Email Templates</h4>
-                    <p className="text-sm text-gray-400">
+<div>
+                    <h4 className="font-medium text-black">Email Templates</h4>
+                    <p className="text-sm text-gray-600">
                       Customize system email templates
                     </p>
                   </div>
@@ -250,17 +251,17 @@ const Admin = () => {
       case "logs":
         return (
           <div className="space-y-6">
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold text-white mb-6">Activity Logs</h3>
+<Card className="p-6">
+              <h3 className="text-lg font-semibold text-black mb-6">Activity Logs</h3>
               <div className="space-y-4">
                 {systemStats.activityLogs?.map((log, index) => (
                   <div key={index} className="flex items-start gap-3 p-4 rounded-lg bg-white/5">
                     <div className="p-2 rounded-lg bg-gradient-to-br from-primary-500/20 to-secondary-500/20">
                       <ApperIcon name="Activity" size={16} className="text-primary-400" />
                     </div>
-                    <div className="flex-1">
-                      <p className="text-white">{log.action}</p>
-                      <p className="text-sm text-gray-400">
+<div className="flex-1">
+                      <p className="text-black">{log.action}</p>
+                      <p className="text-sm text-gray-600">
                         {log.user} • {formatDistance(new Date(log.timestamp), new Date(), { addSuffix: true })}
                       </p>
                     </div>
@@ -296,13 +297,13 @@ const Admin = () => {
         <Card className="p-4 lg:col-span-1">
           <nav className="space-y-2">
             {tabs.map((tab) => (
-              <button
+<button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-colors ${
                   activeTab === tab.id
-                    ? "bg-gradient-to-r from-primary-500/20 to-secondary-500/20 text-white border-l-4 border-primary-500"
-                    : "text-gray-300 hover:text-white hover:bg-white/10"
+                    ? "bg-gradient-to-r from-primary-500/20 to-secondary-500/20 text-black border-l-4 border-primary-500"
+                    : "text-gray-800 hover:text-black hover:bg-white/10"
                 }`}
               >
                 <ApperIcon name={tab.icon} size={16} />

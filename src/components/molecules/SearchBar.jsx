@@ -12,8 +12,8 @@ const SearchBar = ({ placeholder = "Search...", onSearch, className, ...props })
   };
 
   return (
-    <form onSubmit={handleSubmit} className={cn("relative", className)}>
-      <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+<form onSubmit={handleSubmit} className={cn("relative", className)}>
+      <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-600">
         <ApperIcon name="Search" size={16} />
       </div>
       <Input

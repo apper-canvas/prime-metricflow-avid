@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
 import ApperIcon from "@/components/ApperIcon";
+import Avatar from "@/components/atoms/Avatar";
 import Button from "@/components/atoms/Button";
 import Card from "@/components/atoms/Card";
 import FormField from "@/components/molecules/FormField";
-import Avatar from "@/components/atoms/Avatar";
 import { settingsService } from "@/services/api/settingsService";
 
 const Settings = () => {
@@ -79,8 +79,8 @@ const Settings = () => {
     switch (activeTab) {
       case "profile":
         return (
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold text-white mb-6">Profile Information</h3>
+<Card className="p-6">
+            <h3 className="text-lg font-semibold text-black mb-6">Profile Information</h3>
             <form onSubmit={saveProfile} className="space-y-6">
               <div className="flex items-center gap-6">
                 <Avatar
@@ -92,7 +92,7 @@ const Settings = () => {
                   <Button variant="outline" size="sm" className="mb-2">
                     Upload Photo
                   </Button>
-                  <p className="text-sm text-gray-400">
+<p className="text-sm text-gray-600">
                     JPG, PNG or GIF. Max size 2MB.
                   </p>
                 </div>
@@ -121,14 +121,14 @@ const Settings = () => {
                   placeholder="Your company name"
                 />
                 
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-300 block">
+<div className="space-y-2">
+                  <label className="text-sm font-medium text-gray-800 block">
                     Timezone
                   </label>
                   <select
                     value={profile.timezone}
-                    onChange={(e) => setProfile(prev => ({ ...prev, timezone: e.target.value }))}
-                    className="w-full h-10 bg-white/5 border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
+onChange={(e) => setProfile(prev => ({ ...prev, timezone: e.target.value }))}
+                    className="w-full h-10 bg-white/5 border border-white/20 rounded-lg px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-primary-500"
                   >
                     <option value="UTC">UTC</option>
                     <option value="America/New_York">Eastern Time</option>
@@ -148,17 +148,17 @@ const Settings = () => {
       
       case "preferences":
         return (
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold text-white mb-6">Preferences</h3>
+<Card className="p-6">
+            <h3 className="text-lg font-semibold text-black mb-6">Preferences</h3>
             <div className="space-y-6">
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-300 block">
+<div className="space-y-2">
+                <label className="text-sm font-medium text-gray-800 block">
                   Theme
                 </label>
                 <select
                   value={preferences.theme}
-                  onChange={(e) => setPreferences(prev => ({ ...prev, theme: e.target.value }))}
-                  className="w-full h-10 bg-white/5 border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
+onChange={(e) => setPreferences(prev => ({ ...prev, theme: e.target.value }))}
+                  className="w-full h-10 bg-white/5 border border-white/20 rounded-lg px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-primary-500"
                 >
                   <option value="light">Light</option>
                   <option value="dark">Dark</option>
@@ -166,14 +166,14 @@ const Settings = () => {
                 </select>
               </div>
               
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-300 block">
+<div className="space-y-2">
+                <label className="text-sm font-medium text-gray-800 block">
                   Language
                 </label>
                 <select
                   value={preferences.language}
-                  onChange={(e) => setPreferences(prev => ({ ...prev, language: e.target.value }))}
-                  className="w-full h-10 bg-white/5 border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
+onChange={(e) => setPreferences(prev => ({ ...prev, language: e.target.value }))}
+                  className="w-full h-10 bg-white/5 border border-white/20 rounded-lg px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-primary-500"
                 >
                   <option value="en">English</option>
                   <option value="es">Spanish</option>
@@ -191,14 +191,14 @@ const Settings = () => {
       
       case "notifications":
         return (
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold text-white mb-6">Notification Settings</h3>
+<Card className="p-6">
+            <h3 className="text-lg font-semibold text-black mb-6">Notification Settings</h3>
             <div className="space-y-4">
               {Object.entries(preferences.notifications).map(([key, value]) => (
                 <div key={key} className="flex items-center justify-between p-4 rounded-lg bg-white/5">
-                  <div>
-                    <h4 className="font-medium text-white capitalize">{key} Notifications</h4>
-                    <p className="text-sm text-gray-400">
+<div>
+                    <h4 className="font-medium text-black capitalize">{key} Notifications</h4>
+                    <p className="text-sm text-gray-600">
                       Receive notifications via {key}
                     </p>
                   </div>
@@ -229,14 +229,14 @@ const Settings = () => {
       
       case "security":
         return (
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold text-white mb-6">Security Settings</h3>
+<Card className="p-6">
+            <h3 className="text-lg font-semibold text-black mb-6">Security Settings</h3>
             <div className="space-y-6">
               <div className="p-4 rounded-lg bg-white/5 border border-white/10">
                 <div className="flex items-center justify-between">
-                  <div>
-                    <h4 className="font-medium text-white">Two-Factor Authentication</h4>
-                    <p className="text-sm text-gray-400">
+<div>
+                    <h4 className="font-medium text-black">Two-Factor Authentication</h4>
+                    <p className="text-sm text-gray-600">
                       Add an extra layer of security to your account
                     </p>
                   </div>
@@ -248,9 +248,9 @@ const Settings = () => {
               
               <div className="p-4 rounded-lg bg-white/5 border border-white/10">
                 <div className="flex items-center justify-between">
-                  <div>
-                    <h4 className="font-medium text-white">API Keys</h4>
-                    <p className="text-sm text-gray-400">
+<div>
+                    <h4 className="font-medium text-black">API Keys</h4>
+                    <p className="text-sm text-gray-600">
                       Manage your API keys and access tokens
                     </p>
                   </div>
@@ -262,9 +262,9 @@ const Settings = () => {
               
               <div className="p-4 rounded-lg bg-white/5 border border-white/10">
                 <div className="flex items-center justify-between">
-                  <div>
-                    <h4 className="font-medium text-white">Change Password</h4>
-                    <p className="text-sm text-gray-400">
+<div>
+                    <h4 className="font-medium text-black">Change Password</h4>
+                    <p className="text-sm text-gray-600">
                       Update your account password
                     </p>
                   </div>
@@ -279,8 +279,8 @@ const Settings = () => {
       
       case "integrations":
         return (
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold text-white mb-6">Integrations</h3>
+<Card className="p-6">
+            <h3 className="text-lg font-semibold text-black mb-6">Integrations</h3>
             <div className="space-y-4">
               {[
                 { name: "Slack", icon: "MessageSquare", connected: true },
@@ -294,9 +294,9 @@ const Settings = () => {
                     <div className="p-2 rounded-lg bg-gradient-to-br from-primary-500/20 to-secondary-500/20">
                       <ApperIcon name={integration.icon} size={20} className="text-primary-400" />
                     </div>
-                    <div>
-                      <h4 className="font-medium text-white">{integration.name}</h4>
-                      <p className="text-sm text-gray-400">
+<div>
+                      <h4 className="font-medium text-black">{integration.name}</h4>
+                      <p className="text-sm text-gray-600">
                         {integration.connected ? "Connected" : "Not connected"}
                       </p>
                     </div>
@@ -338,13 +338,13 @@ const Settings = () => {
         <Card className="p-4 lg:col-span-1">
           <nav className="space-y-2">
             {tabs.map((tab) => (
-              <button
+<button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-colors ${
                   activeTab === tab.id
-                    ? "bg-gradient-to-r from-primary-500/20 to-secondary-500/20 text-white border-l-4 border-primary-500"
-                    : "text-gray-300 hover:text-white hover:bg-white/10"
+                    ? "bg-gradient-to-r from-primary-500/20 to-secondary-500/20 text-black border-l-4 border-primary-500"
+                    : "text-gray-800 hover:text-black hover:bg-white/10"
                 }`}
               >
                 <ApperIcon name={tab.icon} size={16} />

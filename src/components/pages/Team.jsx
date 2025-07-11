@@ -114,9 +114,9 @@ const Team = () => {
             <div className="p-2 rounded-lg bg-gradient-to-br from-primary-500/20 to-secondary-500/20">
               <ApperIcon name="Users" size={20} className="text-primary-400" />
             </div>
-            <div>
-              <h3 className="text-2xl font-bold text-white">{members.length}</h3>
-              <p className="text-sm text-gray-400">Total Members</p>
+<div>
+              <h3 className="text-2xl font-bold text-black">{members.length}</h3>
+              <p className="text-sm text-gray-600">Total Members</p>
             </div>
           </div>
         </Card>
@@ -126,11 +126,11 @@ const Team = () => {
             <div className="p-2 rounded-lg bg-gradient-to-br from-secondary-500/20 to-accent-500/20">
               <ApperIcon name="Shield" size={20} className="text-secondary-400" />
             </div>
-            <div>
-              <h3 className="text-2xl font-bold text-white">
+<div>
+              <h3 className="text-2xl font-bold text-black">
                 {members.filter(m => m.role === "admin").length}
               </h3>
-              <p className="text-sm text-gray-400">Admins</p>
+              <p className="text-sm text-gray-600">Admins</p>
             </div>
           </div>
         </Card>
@@ -140,11 +140,11 @@ const Team = () => {
             <div className="p-2 rounded-lg bg-gradient-to-br from-accent-500/20 to-primary-500/20">
               <ApperIcon name="UserCheck" size={20} className="text-accent-400" />
             </div>
-            <div>
-              <h3 className="text-2xl font-bold text-white">
+<div>
+              <h3 className="text-2xl font-bold text-black">
                 {members.filter(m => m.status === "active").length}
               </h3>
-              <p className="text-sm text-gray-400">Active</p>
+              <p className="text-sm text-gray-600">Active</p>
             </div>
           </div>
         </Card>
@@ -157,8 +157,8 @@ const Team = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold text-white mb-4">
+<Card className="p-6">
+            <h3 className="text-lg font-semibold text-black mb-4">
               Invite New Member
             </h3>
             <form onSubmit={handleInviteMember} className="space-y-4">
@@ -172,14 +172,14 @@ const Team = () => {
                   required
                 />
                 
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-300 block">
+<div className="space-y-2">
+                  <label className="text-sm font-medium text-gray-800 block">
                     Role
                   </label>
                   <select
                     value={inviteForm.role}
-                    onChange={(e) => setInviteForm(prev => ({ ...prev, role: e.target.value }))}
-                    className="w-full h-10 bg-white/5 border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
+onChange={(e) => setInviteForm(prev => ({ ...prev, role: e.target.value }))}
+                    className="w-full h-10 bg-white/5 border border-white/20 rounded-lg px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-primary-500"
                   >
                     <option value="member">Member</option>
                     <option value="admin">Admin</option>

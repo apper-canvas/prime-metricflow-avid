@@ -53,15 +53,15 @@ const TeamMembersList = ({ members, onRemoveMember, onUpdateRole, className }) =
                   src={member.avatar}
                   fallback={member.name.charAt(0)}
                   size="lg"
-                />
+/>
                 <div>
-                  <h3 className="font-semibold text-white">{member.name}</h3>
-                  <p className="text-sm text-gray-400">{member.email}</p>
+                  <h3 className="font-semibold text-black">{member.name}</h3>
+                  <p className="text-sm text-gray-600">{member.email}</p>
                   <div className="flex items-center gap-2 mt-1">
                     <Badge variant={member.role === "admin" ? "primary" : "secondary"}>
                       {member.role}
                     </Badge>
-                    <span className="text-xs text-gray-500">
+                    <span className="text-xs text-gray-600">
                       Joined {new Date(member.joinedAt).toLocaleDateString()}
                     </span>
                   </div>
@@ -71,9 +71,9 @@ const TeamMembersList = ({ members, onRemoveMember, onUpdateRole, className }) =
               <div className="flex items-center gap-2">
                 <select
                   value={member.role}
-                  onChange={(e) => handleRoleChange(member.Id, e.target.value)}
+onChange={(e) => handleRoleChange(member.Id, e.target.value)}
                   disabled={loading}
-                  className="bg-white/5 border border-white/20 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="bg-white/5 border border-white/20 rounded-lg px-3 py-2 text-sm text-black focus:outline-none focus:ring-2 focus:ring-primary-500"
                 >
                   <option value="member">Member</option>
                   <option value="admin">Admin</option>

@@ -90,9 +90,9 @@ const Analytics = () => {
                   <div className="p-2 rounded-lg bg-gradient-to-br from-primary-500/20 to-secondary-500/20">
                     <ApperIcon name={insight.icon} size={20} className="text-primary-400" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-white">{insight.title}</h3>
-                    <p className="text-sm text-gray-400">{insight.description}</p>
+<div>
+                    <h3 className="font-semibold text-black">{insight.title}</h3>
+                    <p className="text-sm text-gray-600">{insight.description}</p>
                   </div>
                 </div>
                 <Badge variant={insight.trend === "up" ? "success" : "danger"}>
@@ -133,8 +133,8 @@ const Analytics = () => {
 
       {/* Performance Metrics Table */}
       <Card className="p-6">
-        <div className="flex items-center justify-between mb-6">
-          <h3 className="text-lg font-semibold text-white">Performance Metrics</h3>
+<div className="flex items-center justify-between mb-6">
+          <h3 className="text-lg font-semibold text-black">Performance Metrics</h3>
           <Button variant="outline" size="sm">
             <ApperIcon name="Filter" size={16} />
             Filter
@@ -144,27 +144,27 @@ const Analytics = () => {
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-white/10">
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Metric</th>
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Current</th>
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Previous</th>
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Change</th>
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Target</th>
+<tr className="border-b border-white/10">
+                <th className="text-left py-3 px-4 text-sm font-medium text-gray-600">Metric</th>
+                <th className="text-left py-3 px-4 text-sm font-medium text-gray-600">Current</th>
+                <th className="text-left py-3 px-4 text-sm font-medium text-gray-600">Previous</th>
+                <th className="text-left py-3 px-4 text-sm font-medium text-gray-600">Change</th>
+                <th className="text-left py-3 px-4 text-sm font-medium text-gray-600">Target</th>
               </tr>
             </thead>
             <tbody>
               {analytics?.performanceMetrics?.map((metric, index) => (
-                <tr key={index} className="border-b border-white/10 hover:bg-white/5">
-                  <td className="py-3 px-4 text-white font-medium">{metric.name}</td>
-                  <td className="py-3 px-4 text-white">{metric.current}</td>
-                  <td className="py-3 px-4 text-gray-400">{metric.previous}</td>
+<tr key={index} className="border-b border-white/10 hover:bg-white/5">
+                  <td className="py-3 px-4 text-black font-medium">{metric.name}</td>
+                  <td className="py-3 px-4 text-black">{metric.current}</td>
+                  <td className="py-3 px-4 text-gray-600">{metric.previous}</td>
                   <td className="py-3 px-4">
                     <div className={`flex items-center gap-1 ${metric.change > 0 ? 'text-green-400' : 'text-red-400'}`}>
                       <ApperIcon name={metric.change > 0 ? "TrendingUp" : "TrendingDown"} size={14} />
                       {Math.abs(metric.change)}%
                     </div>
-                  </td>
-                  <td className="py-3 px-4 text-gray-400">{metric.target}</td>
+</td>
+                  <td className="py-3 px-4 text-gray-600">{metric.target}</td>
                 </tr>
               ))}
             </tbody>

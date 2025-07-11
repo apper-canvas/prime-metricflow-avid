@@ -27,26 +27,26 @@ const ChartContainer = ({ title, data, type = "line", className }) => {
         strokeDashArray: 3,
       },
       xaxis: {
-        labels: {
+labels: {
           style: {
-            colors: "#9CA3AF",
+            colors: "#374151",
           },
         },
       },
       yaxis: {
         labels: {
           style: {
-            colors: "#9CA3AF",
+            colors: "#374151",
           },
         },
       },
-      legend: {
+legend: {
         labels: {
-          colors: "#9CA3AF",
+          colors: "#374151",
         },
       },
-      tooltip: {
-        theme: "dark",
+tooltip: {
+        theme: "light",
         style: {
           fontSize: "12px",
         },
@@ -105,9 +105,9 @@ const ChartContainer = ({ title, data, type = "line", className }) => {
       transition={{ duration: 0.3 }}
       className={cn("", className)}
     >
-      <Card className="p-6">
+<Card className="p-6">
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-lg font-semibold text-white">{title}</h3>
+          <h3 className="text-lg font-semibold text-black">{title}</h3>
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="sm">
               <ApperIcon name="Download" size={16} />

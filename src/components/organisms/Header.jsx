@@ -108,8 +108,8 @@ const Header = ({ className }) => {
                     transition={{ duration: 0.2 }}
                     className="absolute right-0 top-full mt-2 w-80 glass-card p-4 z-20 max-h-96 overflow-y-auto"
                   >
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="font-semibold text-white">Notifications</h3>
+<div className="flex items-center justify-between mb-4">
+                      <h3 className="font-semibold text-black">Notifications</h3>
                       <Button
                         variant="ghost"
                         size="sm"
