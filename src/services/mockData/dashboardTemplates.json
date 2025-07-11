@@ -1,0 +1,62 @@
+[
+  {
+    "id": "business",
+    "name": "Business Overview",
+    "description": "Perfect for general business metrics and KPIs",
+    "icon": "BarChart3",
+    "features": [
+      "Revenue tracking",
+      "Customer metrics",
+      "Sales performance",
+      "Growth indicators",
+      "Profit analysis"
+    ],
+    "widgets": [
+      "revenue-chart",
+      "customer-count",
+      "sales-pipeline",
+      "growth-metrics"
+    ],
+    "recommended": true
+  },
+  {
+    "id": "marketing",
+    "name": "Marketing Focus",
+    "description": "Optimized for marketing teams and campaigns",
+    "icon": "Target",
+    "features": [
+      "Campaign performance",
+      "Lead generation metrics",
+      "Conversion rates",
+      "ROI analysis",
+      "Social media tracking"
+    ],
+    "widgets": [
+      "campaign-performance",
+      "lead-funnel",
+      "conversion-rates",
+      "roi-calculator"
+    ],
+    "recommended": false
+  },
+  {
+    "id": "analytics",
+    "name": "Data Analytics",
+    "description": "Advanced analytics for data-driven teams",
+    "icon": "TrendingUp",
+    "features": [
+      "Deep data insights",
+      "Custom metrics",
+      "Predictive analytics",
+      "Data visualization",
+      "Advanced filtering"
+    ],
+    "widgets": [
+      "data-explorer",
+      "custom-metrics",
+      "trend-analysis",
+      "predictive-charts"
+    ],
+    "recommended": false
+  }
+]

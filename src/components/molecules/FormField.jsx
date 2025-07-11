@@ -6,7 +6,7 @@ const FormField = forwardRef(({ label, error, className, ...props }, ref) => {
   return (
     <div className={cn("space-y-2", className)}>
 {label && (
-        <label className="text-sm font-medium text-gray-800 block">
+        <label className="text-sm font-medium text-gray-700 block">
           {label}
         </label>
       )}

@@ -7,6 +7,7 @@ import Settings from "@/components/pages/Settings";
 import Admin from "@/components/pages/Admin";
 import Analytics from "@/components/pages/Analytics";
 import Billing from "@/components/pages/Billing";
+import OnboardingWizard from "@/components/pages/OnboardingWizard";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       transition={{ duration: 0.5 }}
       className="min-h-screen bg-gray-50"
     >
-      <Routes>
+<Routes>
+        <Route path="/onboarding" element={<OnboardingWizard />} />
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
           <Route path="analytics" element={<Analytics />} />

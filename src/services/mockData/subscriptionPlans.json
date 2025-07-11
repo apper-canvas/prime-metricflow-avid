@@ -1,0 +1,51 @@
+[
+  {
+    "id": "starter",
+    "name": "Starter",
+    "price": 29,
+    "period": "month",
+    "description": "Perfect for small teams getting started",
+    "features": [
+      "Up to 5 team members",
+      "Basic analytics dashboard",
+      "Email support",
+      "5GB data storage",
+      "Standard integrations"
+    ],
+    "popular": false
+  },
+  {
+    "id": "professional",
+    "name": "Professional",
+    "price": 79,
+    "period": "month",
+    "description": "Best for growing businesses",
+    "features": [
+      "Up to 25 team members",
+      "Advanced analytics & reports",
+      "Priority email & chat support",
+      "50GB data storage",
+      "Custom integrations",
+      "API access"
+    ],
+    "popular": true
+  },
+  {
+    "id": "enterprise",
+    "name": "Enterprise",
+    "price": 199,
+    "period": "month",
+    "description": "For large organizations",
+    "features": [
+      "Unlimited team members",
+      "Full analytics suite",
+      "24/7 phone support",
+      "Unlimited data storage",
+      "Custom integrations",
+      "Dedicated account manager",
+      "White-label options",
+      "Advanced security"
+    ],
+    "popular": false
+  }
+]

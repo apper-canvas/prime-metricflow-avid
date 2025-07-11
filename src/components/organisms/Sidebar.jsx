@@ -39,11 +39,17 @@ const Sidebar = ({ className }) => {
       path: "/settings",
       description: "App configuration"
     },
-    { 
+{ 
       label: "Admin", 
       icon: "Shield", 
       path: "/admin",
       description: "System administration"
+    },
+    { 
+      label: "Onboarding", 
+      icon: "UserPlus", 
+      path: "/onboarding",
+      description: "Setup wizard"
     },
   ];
 
