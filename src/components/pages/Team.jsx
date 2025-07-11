@@ -97,13 +97,12 @@ const Team = () => {
             Manage your team members and their access permissions.
           </p>
         </div>
-        
-        <Button 
+<Button 
           onClick={() => setShowInviteForm(!showInviteForm)}
           className="flex items-center gap-2"
         >
           <ApperIcon name="UserPlus" size={16} />
-          Invite Member
+          Add User
         </Button>
       </div>
 
