@@ -1,0 +1,90 @@
+{
+  "insights": [
+    {
+      "title": "Revenue Growth",
+      "description": "Monthly revenue increased significantly",
+      "icon": "TrendingUp",
+      "value": "+12.5%",
+      "trend": "up"
+    },
+    {
+      "title": "User Engagement",
+      "description": "Average session duration improved",
+      "icon": "Clock",
+      "value": "+8.2%",
+      "trend": "up"
+    },
+    {
+      "title": "Cost Efficiency",
+      "description": "Customer acquisition costs reduced",
+      "icon": "DollarSign",
+      "value": "-5.3%",
+      "trend": "down"
+    }
+  ],
+  "revenueVsCosts": {
+    "categories": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "series": [
+      {
+        "name": "Revenue",
+        "data": [85000, 95000, 105000, 115000, 127420, 135000]
+      },
+      {
+        "name": "Costs",
+        "data": [42500, 47500, 52500, 57500, 63710, 67500]
+      }
+    ]
+  },
+  "userAcquisition": {
+    "categories": ["Organic", "Paid Ads", "Social", "Email", "Referrals"],
+    "series": [
+      {
+        "name": "New Users",
+        "data": [1200, 800, 400, 300, 200]
+      }
+    ]
+  },
+  "geographic": {
+    "labels": ["United States", "Canada", "United Kingdom", "Germany", "Australia"],
+    "series": [45, 20, 15, 12, 8]
+  },
+  "devices": {
+    "categories": ["Desktop", "Mobile", "Tablet"],
+    "series": [
+      {
+        "name": "Users",
+        "data": [15000, 8500, 1335]
+      }
+    ]
+  },
+  "performanceMetrics": [
+    {
+      "name": "Page Load Time",
+      "current": "1.2s",
+      "previous": "1.5s",
+      "change": -20,
+      "target": "1.0s"
+    },
+    {
+      "name": "Bounce Rate",
+      "current": "32%",
+      "previous": "38%",
+      "change": -15.8,
+      "target": "25%"
+    },
+    {
+      "name": "Conversion Rate",
+      "current": "3.24%",
+      "previous": "3.01%",
+      "change": 7.6,
+      "target": "4.0%"
+    },
+    {
+      "name": "Customer Satisfaction",
+      "current": "94.2%",
+      "previous": "89.1%",
+      "change": 5.7,
+      "target": "95%"
+    }
+  ]
+}

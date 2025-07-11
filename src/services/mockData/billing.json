@@ -1,0 +1,99 @@
+{
+  "currentPlan": {
+    "Id": 2,
+    "name": "Pro",
+    "price": 49,
+    "status": "active",
+    "features": [
+      "Up to 50 users",
+      "Advanced analytics",
+      "Priority support",
+      "Custom integrations",
+      "API access"
+    ]
+  },
+  "usage": {
+    "current": 23,
+    "limit": 50
+  },
+  "nextBilling": "2024-02-20T00:00:00Z",
+  "availablePlans": [
+    {
+      "Id": 1,
+      "name": "Starter",
+      "price": 19,
+      "features": [
+        "Up to 10 users",
+        "Basic analytics",
+        "Email support",
+        "Standard integrations"
+      ]
+    },
+    {
+      "Id": 2,
+      "name": "Pro",
+      "price": 49,
+      "features": [
+        "Up to 50 users",
+        "Advanced analytics",
+        "Priority support",
+        "Custom integrations",
+        "API access"
+      ]
+    },
+    {
+      "Id": 3,
+      "name": "Enterprise",
+      "price": 99,
+      "features": [
+        "Unlimited users",
+        "Enterprise analytics",
+        "24/7 support",
+        "Custom integrations",
+        "API access",
+        "White-label options"
+      ]
+    }
+  ],
+  "paymentMethods": [
+    {
+      "Id": 1,
+      "type": "card",
+      "brand": "Visa",
+      "last4": "4242",
+      "expiry": "12/26",
+      "default": true
+    },
+    {
+      "Id": 2,
+      "type": "card",
+      "brand": "Mastercard",
+      "last4": "5555",
+      "expiry": "08/25",
+      "default": false
+    }
+  ],
+  "billingHistory": [
+    {
+      "Id": 1,
+      "date": "2024-01-20T00:00:00Z",
+      "description": "Pro Plan - Monthly",
+      "amount": 49,
+      "status": "paid"
+    },
+    {
+      "Id": 2,
+      "date": "2023-12-20T00:00:00Z",
+      "description": "Pro Plan - Monthly",
+      "amount": 49,
+      "status": "paid"
+    },
+    {
+      "Id": 3,
+      "date": "2023-11-20T00:00:00Z",
+      "description": "Pro Plan - Monthly",
+      "amount": 49,
+      "status": "paid"
+    }
+  ]
+}

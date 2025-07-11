@@ -1,0 +1,44 @@
+{
+  "totalUsers": 12847,
+  "activeUsers": 9621,
+  "revenue": "487,230",
+  "uptime": 99.8,
+  "activityLogs": [
+    {
+      "action": "User Sarah Chen updated their profile",
+      "user": "Sarah Chen",
+      "timestamp": "2024-01-20T14:30:00Z",
+      "type": "profile"
+    },
+    {
+      "action": "System backup completed successfully",
+      "user": "System",
+      "timestamp": "2024-01-20T03:00:00Z",
+      "type": "system"
+    },
+    {
+      "action": "New user Mike Rodriguez registered",
+      "user": "Mike Rodriguez",
+      "timestamp": "2024-01-20T16:20:00Z",
+      "type": "registration"
+    },
+    {
+      "action": "Payment processed for Pro plan",
+      "user": "Emily Davis",
+      "timestamp": "2024-01-20T10:15:00Z",
+      "type": "billing"
+    },
+    {
+      "action": "Admin Alex Johnson updated system settings",
+      "user": "Alex Johnson",
+      "timestamp": "2024-01-19T17:45:00Z",
+      "type": "admin"
+    }
+  ],
+  "systemHealth": {
+    "cpu": 45,
+    "memory": 62,
+    "disk": 28,
+    "network": 85
+  }
+}

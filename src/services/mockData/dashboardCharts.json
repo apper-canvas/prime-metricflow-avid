@@ -1,0 +1,41 @@
+{
+  "revenue": {
+    "categories": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "series": [
+      {
+        "name": "Revenue",
+        "data": [85000, 95000, 105000, 115000, 127420, 135000]
+      },
+      {
+        "name": "Profit",
+        "data": [42500, 47500, 52500, 57500, 63710, 67500]
+      }
+    ]
+  },
+  "users": {
+    "categories": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "series": [
+      {
+        "name": "New Users",
+        "data": [1200, 1800, 2100, 1900, 2400, 2800]
+      },
+      {
+        "name": "Active Users",
+        "data": [18500, 20100, 22400, 23800, 24835, 26200]
+      }
+    ]
+  },
+  "traffic": {
+    "labels": ["Organic Search", "Direct", "Social Media", "Email", "Referrals"],
+    "series": [42, 28, 15, 10, 5]
+  },
+  "conversion": {
+    "categories": ["Landing", "Interest", "Consideration", "Purchase", "Retention"],
+    "series": [
+      {
+        "name": "Conversion Rate",
+        "data": [100, 65, 45, 25, 20]
+      }
+    ]
+  }
+}

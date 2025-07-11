@@ -1,0 +1,52 @@
+[
+  {
+    "Id": 1,
+    "name": "Alex Johnson",
+    "email": "alex@metricflow.com",
+    "role": "admin",
+    "status": "active",
+    "lastActive": "2024-01-20T14:30:00Z",
+    "joinedAt": "2024-01-15T10:00:00Z",
+    "avatar": null
+  },
+  {
+    "Id": 2,
+    "name": "Sarah Chen",
+    "email": "sarah@metricflow.com",
+    "role": "member",
+    "status": "active",
+    "lastActive": "2024-01-20T11:45:00Z",
+    "joinedAt": "2024-01-18T09:15:00Z",
+    "avatar": null
+  },
+  {
+    "Id": 3,
+    "name": "Mike Rodriguez",
+    "email": "mike@metricflow.com",
+    "role": "member",
+    "status": "suspended",
+    "lastActive": "2024-01-19T16:22:00Z",
+    "joinedAt": "2024-01-20T16:20:00Z",
+    "avatar": null
+  },
+  {
+    "Id": 4,
+    "name": "Emily Davis",
+    "email": "emily@metricflow.com",
+    "role": "admin",
+    "status": "active",
+    "lastActive": "2024-01-19T17:10:00Z",
+    "joinedAt": "2024-01-12T08:30:00Z",
+    "avatar": null
+  },
+  {
+    "Id": 5,
+    "name": "David Wilson",
+    "email": "david@metricflow.com",
+    "role": "member",
+    "status": "inactive",
+    "lastActive": "2024-01-18T12:00:00Z",
+    "joinedAt": "2024-01-16T14:00:00Z",
+    "avatar": null
+  }
+]

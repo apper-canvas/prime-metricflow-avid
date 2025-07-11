@@ -1,0 +1,44 @@
+{
+  "profile": {
+    "name": "Alex Johnson",
+    "email": "alex@metricflow.com",
+    "company": "MetricFlow Inc.",
+    "timezone": "America/New_York",
+    "avatar": null
+  },
+  "preferences": {
+    "notifications": {
+      "email": true,
+      "push": true,
+      "sms": false
+    },
+    "theme": "dark",
+    "language": "en"
+  },
+  "security": {
+    "twoFactorEnabled": false,
+    "lastPasswordChange": "2024-01-10T12:00:00Z",
+    "apiKeys": [
+      {
+        "Id": 1,
+        "name": "Production API",
+        "key": "mk_live_****",
+        "created": "2024-01-15T10:00:00Z",
+        "lastUsed": "2024-01-20T14:30:00Z"
+      }
+    ]
+  },
+  "integrations": {
+    "slack": {
+      "connected": true,
+      "workspace": "metricflow-team"
+    },
+    "stripe": {
+      "connected": true,
+      "accountId": "acct_****"
+    },
+    "googleAnalytics": {
+      "connected": false
+    }
+  }
+}

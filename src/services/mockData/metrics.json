@@ -1,0 +1,92 @@
+[
+  {
+    "Id": 1,
+    "name": "Total Revenue",
+    "value": "$127,420",
+    "change": 12.5,
+    "period": "monthly",
+    "icon": "DollarSign",
+    "chartData": [
+      { "month": "Jan", "value": 85000 },
+      { "month": "Feb", "value": 95000 },
+      { "month": "Mar", "value": 105000 },
+      { "month": "Apr", "value": 115000 },
+      { "month": "May", "value": 127420 }
+    ]
+  },
+  {
+    "Id": 2,
+    "name": "Active Users",
+    "value": "24,835",
+    "change": 8.2,
+    "period": "monthly",
+    "icon": "Users",
+    "chartData": [
+      { "month": "Jan", "value": 18500 },
+      { "month": "Feb", "value": 20100 },
+      { "month": "Mar", "value": 22400 },
+      { "month": "Apr", "value": 23800 },
+      { "month": "May", "value": 24835 }
+    ]
+  },
+  {
+    "Id": 3,
+    "name": "Conversion Rate",
+    "value": "3.24%",
+    "change": -2.1,
+    "period": "monthly",
+    "icon": "TrendingUp",
+    "chartData": [
+      { "month": "Jan", "value": 3.8 },
+      { "month": "Feb", "value": 3.6 },
+      { "month": "Mar", "value": 3.4 },
+      { "month": "Apr", "value": 3.3 },
+      { "month": "May", "value": 3.24 }
+    ]
+  },
+  {
+    "Id": 4,
+    "name": "Growth Rate",
+    "value": "18.7%",
+    "change": 15.3,
+    "period": "monthly",
+    "icon": "BarChart3",
+    "chartData": [
+      { "month": "Jan", "value": 12.5 },
+      { "month": "Feb", "value": 14.2 },
+      { "month": "Mar", "value": 16.1 },
+      { "month": "Apr", "value": 17.8 },
+      { "month": "May", "value": 18.7 }
+    ]
+  },
+  {
+    "Id": 5,
+    "name": "Customer Satisfaction",
+    "value": "94.2%",
+    "change": 5.8,
+    "period": "monthly",
+    "icon": "Heart",
+    "chartData": [
+      { "month": "Jan", "value": 89.5 },
+      { "month": "Feb", "value": 91.2 },
+      { "month": "Mar", "value": 92.8 },
+      { "month": "Apr", "value": 93.5 },
+      { "month": "May", "value": 94.2 }
+    ]
+  },
+  {
+    "Id": 6,
+    "name": "Churn Rate",
+    "value": "2.1%",
+    "change": -12.5,
+    "period": "monthly",
+    "icon": "UserX",
+    "chartData": [
+      { "month": "Jan", "value": 2.8 },
+      { "month": "Feb", "value": 2.6 },
+      { "month": "Mar", "value": 2.4 },
+      { "month": "Apr", "value": 2.3 },
+      { "month": "May", "value": 2.1 }
+    ]
+  }
+]
